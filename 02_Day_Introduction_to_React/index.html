@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>30 Days Of React Challenge</title>
+  </head>
+
+  <body>
+    <div class="root"></div>
+
+    <script
+        crossorigin
+        src="https://unpkg.com/react@16/umd/react.development.js"
+    ></script>
+    <script
+        crossorigin
+        src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        // our code goes here
+        console.log(React)
+      // To get the root element from the HTML document
+        const rootElement = document.querySelector('.root')
+
+        // JSX element
+        const style = { border: '2px solid orange', color: 'black', fontSize: '18px' }
+
+        const header = (
+            <header style={style}>
+                <h1>Welcome to React!</h1>
+                <h2>Getting started with React</h2>
+                <h3>JavaScript Library</h3>
+                <p>bas kasidej</p>
+                <small>12-02-2023</small>
+            </header>
+        )
+        // JSX element
+        const main = (
+        <main>
+            <p>Prerequisite to get started react.js:</p>
+            <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            </ul>
+        </main>
+        )
+        // JSX element
+        const footer = (
+        <footer>
+            <p>Copyright 2023</p>
+        </footer>
+        )
+
+        // JSX element which contain all, it is a container or parent
+        const app = (
+        <div>
+            {header}
+            {main}
+            {footer}
+        </div>
+        )
+        // we render the JSX element using the ReactDOM package
+        // ReactDOM has the render method and the render method takes two arguments
+        // ReactDOM.render(jsxElement, rootElement)
+        ReactDOM.render(app, rootElement)
+    </script>
+  </body>
+</html>
