@@ -39,8 +39,36 @@ const square_exp = function(number) {
 }
 console.log(`Square expression function: ${square_exp(5)}`)
 
-// Self invoking function
+// Self invoking functions are anonymous functions which do not need to be called to return a value.
 ;(function(n){
     console.log(n**2)
 })(5)
 
+let squarenum = (function(number) {
+    return number**2
+})(5)
+console.log(squarenum);
+
+// Arrow functions
+squarenum = (number) => {
+    return number**2
+}
+console.log(squarenum(5));
+
+// Higher order functions
+const callback = (number) => {
+    return number**2
+}
+function cube(callback, number) {
+    return callback(number)*number
+}
+console.log(cube(callback,2));
+
+// setInterval
+function callback2() {
+    console.log("Interval Hello!");
+}
+// setInterval(callback2, 2000); // print every 2 seconds
+
+// setTimeout
+setTimeout(callback2, 2000); // print after it waits for 2 seconds)
